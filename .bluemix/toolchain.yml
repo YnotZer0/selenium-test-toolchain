@@ -1,7 +1,5 @@
 ---
 default_locale: en
-locales: 
-  $ref: locales.yml
 name: "Selenium Test toolchain"
 description: "With this toolchain, you can create a toolchain with a pipeline that demonstrates running some selenium tests.\n\nTo get started, click **Create**."
 version: 0.1
@@ -31,7 +29,7 @@ sample-build:
      env:
       SAMPLE_REPO: "sample-repo"
      execute: true
-    services: ["sample-repo"]
+    services: ["sample-repo"]   
     
 
 #Web IDE
