@@ -1,0 +1,39 @@
+---
+default_locale: en
+locales: 
+  $ref: locales.yml
+name: "Selenium Test toolchain"
+description: "With this toolchain, you can create a toolchain with a pipeline that demonstrates running some selenium tests.\n\nTo get started, click **Create**."
+version: 0.1
+image: data:image/svg+xml;base64,$file(toolchain.svg,base64)
+icon: data:image/svg+xml;base64,$file(icon.svg,base64)
+required: 
+ - sample-build
+ - sample-repo
+
+# Github repos
+sample-repo:
+  service_id: githubpublic
+  parameters:
+    repo_name: "{{name}}"
+    repo_url: https://github.com/open-toolchain/selenium-test-example
+    type: clone
+    has_issues: true
+
+# Pipelines
+sample-build:
+  service_id: pipeline
+  parameters:
+    name: "{{name}}"
+    ui-pipeline: false
+    configuration: 
+     content: $file(pipeline.yml)
+     env:
+      SAMPLE_REPO: "sample-repo"
+     execute: true
+    services: ["sample-repo"]
+    
+
+#Web IDE
+webide:
+  service_id: orion
