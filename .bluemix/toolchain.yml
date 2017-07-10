@@ -17,7 +17,7 @@ template:
     git branch: >-
       [master](https://github.com/open-toolchain/selenium-test-example/tree/master)
 toolchain:
-  name: 'simple-toolchain-{{timestamp}}'
+  name: 'selenium-test-toolchain-{{timestamp}}'
   template:
     getting_started:
       $ref: "#/messages/template.gettingStarted"
@@ -26,7 +26,7 @@ services:
     service_id: githubpublic
     parameters:
       repo_name: '{{toolchain.name}}'
-      repo_url: 'https://github.com/open-toolchain/node-hello-world'
+      repo_url: 'https://github.com/open-toolchain/selenium-test-example'
       type: clone
       has_issues: true
       enable_traceability: true
