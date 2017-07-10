@@ -13,9 +13,9 @@ template:
     - sample-repo
   info:
     git url: >-
-      [https://github.com/open-toolchain/selenium-test-example](https://github.com/open-toolchain/selenium-test-example)
+      [https://github.com/open-toolchain/selenium-test-toolchain](https://github.com/open-toolchain/selenium-test-toolchain)
     git branch: >-
-      [master](https://github.com/open-toolchain/selenium-test-example/tree/master)
+      [master](https://github.com/open-toolchain/selenium-test-toolchain/tree/master)
 toolchain:
   name: 'selenium-test-toolchain-{{timestamp}}'
   template:
