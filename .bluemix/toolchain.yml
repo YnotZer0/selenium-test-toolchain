@@ -36,7 +36,7 @@ services:
       services:
         - sample-repo
       name: '{{services.sample-repo.parameters.repo_name}}'
-      ui-pipeline: true
+      ui-pipeline: false
       configuration:
         content:
           $text: pipeline.yml
